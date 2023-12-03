@@ -42,17 +42,6 @@ struct ProgramCell: View {
                     .font(.subheadline)
                     .foregroundStyle(Color.white)
                     .foregroundColor(.secondary)
-                
-                Button {
-                    
-                } label: {
-                    Text("Press to Purchase")
-                        .frame(maxWidth: .infinity)
-                        .padding(5)
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(Color.charcoal)
-                .padding(.vertical)
             }
             .padding(20)
             .multilineTextAlignment(.center)

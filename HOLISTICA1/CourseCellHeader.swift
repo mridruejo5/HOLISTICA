@@ -31,11 +31,6 @@ struct CourseCellHeader: View {
                 Text("\(course.name) Programs")
                     .font(.title)
                     .foregroundColor(.primary)
-                
-                Text(course.catchphrase)
-                    .font(.callout)
-                    //.foregroundStyle(Color.white)
-                    .foregroundColor(.secondary)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

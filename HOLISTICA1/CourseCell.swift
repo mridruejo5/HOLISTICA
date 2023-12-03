@@ -37,14 +37,11 @@ struct CourseCell: View {
                     .multilineTextAlignment(.center)
                     .padding(.top)
                 
-                /*
                 Text(course.catchphrase)
-                    .font(.subheadline)
-                    .foregroundColor(Color.white)
+                    .font(.callout)
+                    .foregroundStyle(Color.white)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
-                    .padding(8)
-                 */
             }
         }
         .frame(width: 275, height: 250, alignment: .center)

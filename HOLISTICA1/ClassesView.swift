@@ -30,7 +30,7 @@ struct ClassesView: View {
                         await boughtProgramsVM.unsuscribeProgram(program: program)
                     }
                 } label: {
-                    Text("Ubsuscribe From Program")
+                    Text("Unsuscribe From Program")
                         .frame(maxWidth: .infinity)
                         .padding(5)
                 }
