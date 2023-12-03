@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "bcsecure2023",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/applecodingacademy/BCSecure2023.git",
+      "state" : {
+        "revision" : "f75b8ee09fb0d9f7560a506baf71ea8df5ce83ef",
+        "version" : "0.8.0"
+      }
+    },
+    {
+      "identity" : "mrnetwork",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mridruejo5/MRNetwork.git",
+      "state" : {
+        "revision" : "12cf025ed24dd01d108fed4d86603c2867cb523a",
+        "version" : "0.3.0"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct ProgramCellHeader: View {
+    let program: CoursePrograms
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center, spacing: 4) {
+            Text("\(program.name)")
+                .font(.title2)
+                .foregroundColor(.primary)
+            
+            Text(program.description)
+                .font(.callout)
+                .foregroundColor(.secondary)
+        }
+        .multilineTextAlignment(.center)
+        .clipShape(.rect(cornerRadius: 10))
     }
 }
 
+
 #Preview {
-    ProgramCellHeader()
+    ProgramCellHeader(program: .program1)
 }

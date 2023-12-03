@@ -12,37 +12,56 @@ struct CourseCell: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            //Image(course.icon)
-            UIImage(data: course.icon)
-                //.resizable()
-                //.scaledToFill()
-                .padding()
-                .frame(width: 80, height: 80)
-                .cornerRadius(10)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.redwood, lineWidth: 5)
-                }
-                .background(Color.almond)
-                .cornerRadius(10)
-                .shadow(radius: 4)
+            if let icon = course.icon, let uimage = UIImage(data: icon) {
+                Image(uiImage: uimage)
+                    .resizable()
+                    .scaledToFill()
+                    .padding()
+                    .frame(width: 80, height: 80)
+                    .cornerRadius(10)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.redwood, lineWidth: 5)
+                    }
+                    .background(Color.almond)
+                    .cornerRadius(10)
+                    .shadow(radius: 4)
+            }
             
             VStack(alignment: .center, spacing: 4) {
                 Text("\(course.name) programs")
-                    .font(.headline)
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(Color.sand)
                     .foregroundColor(.primary)
+                    .multilineTextAlignment(.center)
                     .padding(.top)
                 
+                /*
                 Text(course.catchphrase)
                     .font(.subheadline)
+                    .foregroundColor(Color.white)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
                     .padding(8)
+                 */
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .frame(width: 275, height: 250, alignment: .center)
         .padding()
-        .background(Color.sand)
+        //.background(Color.sand)
+        .background {
+            if let image = course.image, let uimage = UIImage(data: image) {
+                Image(uiImage: uimage)
+                    .resizable()
+                    .scaledToFill()
+                    .opacity(0.8)
+                    .overlay {
+                        Rectangle()
+                            .opacity(0.3)
+                    }
+            }
+        }
         .cornerRadius(10)
         .background {
             RoundedRectangle(cornerRadius: 10)

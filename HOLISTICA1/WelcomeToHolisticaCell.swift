@@ -8,11 +8,41 @@
 import SwiftUI
 
 struct WelcomeToHolisticaCell: View {
+    
+    let user: UserInfo?
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if let user = user {
+            HStack {
+                Image(systemName: "person.crop.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 75, height: 75,alignment: .leading)
+                    .background(Color.gray.opacity(0.4))
+                    .clipShape(Circle())
+                
+                Spacer()
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Welcome to Holistica,")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.primary)
+                    
+                    Text(user.name)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.primary)
+                    
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .center).padding()
+        }
     }
 }
 
+
 #Preview {
-    WelcomeToHolisticaCell()
+    WelcomeToHolisticaCell(user: .user1)
+        .environmentObject(LoginVM())
 }

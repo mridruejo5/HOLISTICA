@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct ContentView2: View {
+struct ContentView: View {
     @EnvironmentObject var loginVM:LoginVM
-    @ObservedObject var coursesVM = CoursesVM()
+    @EnvironmentObject var coursesVM:CoursesVM
+    @EnvironmentObject var boughtProgramsVM:BoughtProgramsVM
     
     @State var showCreateProfile = false
     
@@ -23,25 +24,16 @@ struct ContentView2: View {
                     .transition(.opacity.combined(with: .move(edge: .bottom)))
             } else {
                 CoursesView()
-                    .transition(.opacity)
+                    .onAppear {
+                        loginVM.initLogin()
+                        Task {
+                            await boughtProgramsVM.getBoughtPrograms()
+                        }
+                    }
             }
         }
         .animation(.default, value: loginVM.showLogin)
         .animation(.spring().delay(1), value: loginVM.showLogin)
-        
-        .onAppear {
-            loginVM.initLogin()
-            //coursesVM.init()
-        }
-        
-        .onChange(of: loginVM.showLogin) { oldValue, newValue in
-            if !newValue {
-                Task {
-                    await loginVM.getUserInfo()
-                    await coursesVM.getAllCourses()
-                }
-            }
-        }
         .alert("User log in error",
                isPresented: $loginVM.showAlert) {
             Button(action: {}, label: { Text("OK") })
@@ -53,6 +45,8 @@ struct ContentView2: View {
 
 
 #Preview {
-    ContentView2()
+    ContentView()
         .environmentObject(LoginVM())
+        .environmentObject(CoursesVM())
+        .environmentObject(BoughtProgramsVM(program: .program1))
 }

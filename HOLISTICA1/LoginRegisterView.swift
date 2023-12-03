@@ -5,16 +5,16 @@
 //  Created by Miguel Ridruejo on 2/11/23.
 //
 
+
 import SwiftUI
 
-struct LoginRegisterN: View {
-    @State var screen:LoginRegister = .login
+struct LoginRegisterView: View {
     @Binding var showLogin:Bool
     
     var body: some View {
         Group {
             VStack {
-                Image("pexels-anastasia-shuraeva2x")
+                Image("FotoYoga2x")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -37,7 +37,6 @@ struct LoginRegisterN: View {
                     .frame(maxHeight: .infinity, alignment: .bottom)
                 }
             }
-            .padding(0.0)
             LoginView(showLogin: $showLogin)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         }
@@ -45,5 +44,5 @@ struct LoginRegisterN: View {
 }
 
 #Preview {
-    LoginRegisterN(showLogin: .constant(true))
+    LoginRegisterView(showLogin: .constant(true))
 }

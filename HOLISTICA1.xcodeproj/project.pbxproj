@@ -7,13 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F108CF232AE41F4C00D31D93 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108CF222AE41F4C00D31D93 /* APIModel.swift */; };
+		F108CF292AE4202E00D31D93 /* SecManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108CF282AE4202E00D31D93 /* SecManager.swift */; };
+		F108CF2F2AE4227300D31D93 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108CF2E2AE4227300D31D93 /* LoginView.swift */; };
+		F108CF312AE4228100D31D93 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108CF302AE4228100D31D93 /* RegisterView.swift */; };
 		F128DE222AE0609200EA040C /* HOLISTICA1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DE212AE0609200EA040C /* HOLISTICA1App.swift */; };
-		F128DE242AE0609200EA040C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DE232AE0609200EA040C /* ContentView.swift */; };
 		F128DE262AE0609300EA040C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F128DE252AE0609300EA040C /* Assets.xcassets */; };
 		F128DE292AE0609300EA040C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F128DE282AE0609300EA040C /* Preview Assets.xcassets */; };
 		F128DE332AE0609400EA040C /* HOLISTICA1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DE322AE0609400EA040C /* HOLISTICA1Tests.swift */; };
 		F128DE3D2AE0609400EA040C /* HOLISTICA1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DE3C2AE0609400EA040C /* HOLISTICA1UITests.swift */; };
 		F128DE3F2AE0609400EA040C /* HOLISTICA1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DE3E2AE0609400EA040C /* HOLISTICA1UITestsLaunchTests.swift */; };
+		F128DE4C2AE060CB00EA040C /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DE4B2AE060CB00EA040C /* Interface.swift */; };
+		F128DE502AE0688A00EA040C /* BCSecure2023 in Frameworks */ = {isa = PBXBuildFile; productRef = F128DE4F2AE0688A00EA040C /* BCSecure2023 */; };
+		F129990A2AF3A7F0009B35ED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12999092AF3A7F0009B35ED /* Extensions.swift */; };
+		F129990E2AF3D1CF009B35ED /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F129990D2AF3D1CF009B35ED /* LoginRegisterView.swift */; };
+		F12999142AF40DB4009B35ED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12999132AF40DB4009B35ED /* Model.swift */; };
+		F12999162AF40E17009B35ED /* CoursesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12999152AF40E17009B35ED /* CoursesVM.swift */; };
+		F12999182AF41025009B35ED /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12999172AF41025009B35ED /* TestData.swift */; };
+		F129991F2AF43784009B35ED /* CourseCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F129991E2AF43784009B35ED /* CourseCellHeader.swift */; };
+		F12C67352AF828DE0034AD97 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C67342AF828DE0034AD97 /* UserProfileVM.swift */; };
+		F12D1F312B1D1D21003E4DC1 /* MRNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = F12D1F302B1D1D21003E4DC1 /* MRNetwork */; };
+		F12D1F332B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D1F322B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift */; };
+		F139E64B2B1247B200D56910 /* BoughtProgramsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139E64A2B1247B200D56910 /* BoughtProgramsVM.swift */; };
+		F139E64D2B1362A200D56910 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139E64C2B1362A200D56910 /* PurchaseView.swift */; };
+		F139E64F2B13827D00D56910 /* BoughtProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139E64E2B13827C00D56910 /* BoughtProgramCell.swift */; };
+		F14BF4032B0A975200CDB52C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4022B0A975200CDB52C /* SettingsView.swift */; };
+		F14BF4052B0ABD9300CDB52C /* CustomAlertLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */; };
+		F1C83A932AEEC992000B5589 /* BiometryLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C83A922AEEC992000B5589 /* BiometryLogin.swift */; };
+		F1C83A952AEECA32000B5589 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C83A942AEECA32000B5589 /* LoginVM.swift */; };
+		F1CDE0F42AF53203006BD246 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CDE0F32AF53203006BD246 /* CreateProfileView.swift */; };
+		F1D55BFD2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55BFC2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift */; };
+		F1D55C042AFEA8E600B58405 /* ProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C032AFEA8E600B58405 /* ProgramsView.swift */; };
+		F1D55C082B00233000B58405 /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C072B00233000B58405 /* ProgramCell.swift */; };
+		F1D55C0A2B00243400B58405 /* ProgramsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C092B00243400B58405 /* ProgramsVM.swift */; };
+		F1D55C0C2B0137DE00B58405 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C0B2B0137DD00B58405 /* CoursesView.swift */; };
+		F1D55C0E2B013A5B00B58405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C0D2B013A5B00B58405 /* ContentView.swift */; };
+		F1DDBB3B2AE5925C00ECFF7A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDBB3A2AE5925C00ECFF7A /* Network.swift */; };
+		F1F1BE142B0939330089FA26 /* ClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE132B0939330089FA26 /* ClassesView.swift */; };
+		F1F1BE162B093B2B0089FA26 /* ClassesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE152B093B2B0089FA26 /* ClassesVM.swift */; };
+		F1F1BE182B093E3D0089FA26 /* ProgramCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE172B093E3D0089FA26 /* ProgramCellHeader.swift */; };
+		F1F1BE1A2B0940520089FA26 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE192B0940520089FA26 /* ClassCell.swift */; };
+		F1F1BE1E2B0996AC0089FA26 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE1D2B0996AC0089FA26 /* CourseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +68,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F108CF222AE41F4C00D31D93 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		F108CF282AE4202E00D31D93 /* SecManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecManager.swift; sourceTree = "<group>"; };
+		F108CF2E2AE4227300D31D93 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F108CF302AE4228100D31D93 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		F128DE1E2AE0609200EA040C /* HOLISTICA1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HOLISTICA1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F128DE212AE0609200EA040C /* HOLISTICA1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOLISTICA1App.swift; sourceTree = "<group>"; };
-		F128DE232AE0609200EA040C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F128DE252AE0609300EA040C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F128DE282AE0609300EA040C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F128DE2E2AE0609400EA040C /* HOLISTICA1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HOLISTICA1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +81,36 @@
 		F128DE382AE0609400EA040C /* HOLISTICA1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HOLISTICA1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F128DE3C2AE0609400EA040C /* HOLISTICA1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOLISTICA1UITests.swift; sourceTree = "<group>"; };
 		F128DE3E2AE0609400EA040C /* HOLISTICA1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOLISTICA1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F128DE4B2AE060CB00EA040C /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		F128DE4D2AE0618A00EA040C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F12999092AF3A7F0009B35ED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F129990D2AF3D1CF009B35ED /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
+		F12999132AF40DB4009B35ED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F12999152AF40E17009B35ED /* CoursesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVM.swift; sourceTree = "<group>"; };
+		F12999172AF41025009B35ED /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		F129991E2AF43784009B35ED /* CourseCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellHeader.swift; sourceTree = "<group>"; };
+		F12C67342AF828DE0034AD97 /* UserProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVM.swift; sourceTree = "<group>"; };
+		F12D1F322B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgramsEmptyCell.swift; sourceTree = "<group>"; };
+		F139E64A2B1247B200D56910 /* BoughtProgramsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtProgramsVM.swift; sourceTree = "<group>"; };
+		F139E64C2B1362A200D56910 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		F139E64E2B13827C00D56910 /* BoughtProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtProgramCell.swift; sourceTree = "<group>"; };
+		F14BF4022B0A975200CDB52C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertLogout.swift; sourceTree = "<group>"; };
+		F1C83A922AEEC992000B5589 /* BiometryLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryLogin.swift; sourceTree = "<group>"; };
+		F1C83A942AEECA32000B5589 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		F1CDE0F32AF53203006BD246 /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
+		F1D55BFC2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeToHolisticaCell.swift; sourceTree = "<group>"; };
+		F1D55C032AFEA8E600B58405 /* ProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsView.swift; sourceTree = "<group>"; };
+		F1D55C072B00233000B58405 /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
+		F1D55C092B00243400B58405 /* ProgramsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsVM.swift; sourceTree = "<group>"; };
+		F1D55C0B2B0137DD00B58405 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		F1D55C0D2B013A5B00B58405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F1DDBB3A2AE5925C00ECFF7A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F1F1BE132B0939330089FA26 /* ClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesView.swift; sourceTree = "<group>"; };
+		F1F1BE152B093B2B0089FA26 /* ClassesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesVM.swift; sourceTree = "<group>"; };
+		F1F1BE172B093E3D0089FA26 /* ProgramCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCellHeader.swift; sourceTree = "<group>"; };
+		F1F1BE192B0940520089FA26 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		F1F1BE1D2B0996AC0089FA26 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F128DE502AE0688A00EA040C /* BCSecure2023 in Frameworks */,
+				F12D1F312B1D1D21003E4DC1 /* MRNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +140,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F108CF242AE41F8800D31D93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F108CF222AE41F4C00D31D93 /* APIModel.swift */,
+				F12999132AF40DB4009B35ED /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F108CF252AE41F9300D31D93 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F128DE4B2AE060CB00EA040C /* Interface.swift */,
+				F1DDBB3A2AE5925C00ECFF7A /* Network.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		F108CF262AE41F9F00D31D93 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				F128DE212AE0609200EA040C /* HOLISTICA1App.swift */,
+				F128DE252AE0609300EA040C /* Assets.xcassets */,
+				F128DE4D2AE0618A00EA040C /* Info.plist */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		F108CF272AE4202100D31D93 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				F108CF282AE4202E00D31D93 /* SecManager.swift */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
 		F128DE152AE0609200EA040C = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +199,20 @@
 		F128DE202AE0609200EA040C /* HOLISTICA1 */ = {
 			isa = PBXGroup;
 			children = (
-				F128DE212AE0609200EA040C /* HOLISTICA1App.swift */,
-				F128DE232AE0609200EA040C /* ContentView.swift */,
-				F128DE252AE0609300EA040C /* Assets.xcassets */,
+				F129991A2AF4142B009B35ED /* ViewModels */,
+				F12999192AF413FC009B35ED /* LoginViews */,
+				F1D55C0D2B013A5B00B58405 /* ContentView.swift */,
+				F1D55C0B2B0137DD00B58405 /* CoursesView.swift */,
+				F14BF4022B0A975200CDB52C /* SettingsView.swift */,
+				F1D55C032AFEA8E600B58405 /* ProgramsView.swift */,
+				F1F1BE132B0939330089FA26 /* ClassesView.swift */,
+				F139E64C2B1362A200D56910 /* PurchaseView.swift */,
+				F129991B2AF43580009B35ED /* Components */,
+				F108CF272AE4202100D31D93 /* Security */,
+				F108CF262AE41F9F00D31D93 /* System */,
+				F12999082AF3A7D6009B35ED /* Extensions */,
+				F108CF252AE41F9300D31D93 /* Network */,
+				F108CF242AE41F8800D31D93 /* Model */,
 				F128DE272AE0609300EA040C /* Preview Content */,
 			);
 			path = HOLISTICA1;
@@ -106,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				F128DE282AE0609300EA040C /* Preview Assets.xcassets */,
+				F12999172AF41025009B35ED /* TestData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -127,6 +244,55 @@
 			path = HOLISTICA1UITests;
 			sourceTree = "<group>";
 		};
+		F12999082AF3A7D6009B35ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F12999092AF3A7F0009B35ED /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		F12999192AF413FC009B35ED /* LoginViews */ = {
+			isa = PBXGroup;
+			children = (
+				F108CF2E2AE4227300D31D93 /* LoginView.swift */,
+				F1C83A922AEEC992000B5589 /* BiometryLogin.swift */,
+				F108CF302AE4228100D31D93 /* RegisterView.swift */,
+				F129990D2AF3D1CF009B35ED /* LoginRegisterView.swift */,
+				F1CDE0F32AF53203006BD246 /* CreateProfileView.swift */,
+			);
+			name = LoginViews;
+			sourceTree = "<group>";
+		};
+		F129991A2AF4142B009B35ED /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F12999152AF40E17009B35ED /* CoursesVM.swift */,
+				F1C83A942AEECA32000B5589 /* LoginVM.swift */,
+				F12C67342AF828DE0034AD97 /* UserProfileVM.swift */,
+				F1D55C092B00243400B58405 /* ProgramsVM.swift */,
+				F1F1BE152B093B2B0089FA26 /* ClassesVM.swift */,
+				F139E64A2B1247B200D56910 /* BoughtProgramsVM.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		F129991B2AF43580009B35ED /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F129991E2AF43784009B35ED /* CourseCellHeader.swift */,
+				F1F1BE1D2B0996AC0089FA26 /* CourseCell.swift */,
+				F1D55BFC2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift */,
+				F1D55C072B00233000B58405 /* ProgramCell.swift */,
+				F1F1BE172B093E3D0089FA26 /* ProgramCellHeader.swift */,
+				F1F1BE192B0940520089FA26 /* ClassCell.swift */,
+				F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */,
+				F139E64E2B13827C00D56910 /* BoughtProgramCell.swift */,
+				F12D1F322B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +309,10 @@
 			dependencies = (
 			);
 			name = HOLISTICA1;
+			packageProductDependencies = (
+				F128DE4F2AE0688A00EA040C /* BCSecure2023 */,
+				F12D1F302B1D1D21003E4DC1 /* MRNetwork */,
+			);
 			productName = HOLISTICA1;
 			productReference = F128DE1E2AE0609200EA040C /* HOLISTICA1.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +385,10 @@
 				Base,
 			);
 			mainGroup = F128DE152AE0609200EA040C;
+			packageReferences = (
+				F128DE4E2AE0688A00EA040C /* XCRemoteSwiftPackageReference "BCSecure2023" */,
+				F12D1F2F2B1D1D21003E4DC1 /* XCRemoteSwiftPackageReference "MRNetwork" */,
+			);
 			productRefGroup = F128DE1F2AE0609200EA040C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +431,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F128DE242AE0609200EA040C /* ContentView.swift in Sources */,
+				F1F1BE182B093E3D0089FA26 /* ProgramCellHeader.swift in Sources */,
+				F12999142AF40DB4009B35ED /* Model.swift in Sources */,
+				F12C67352AF828DE0034AD97 /* UserProfileVM.swift in Sources */,
+				F139E64D2B1362A200D56910 /* PurchaseView.swift in Sources */,
+				F12999162AF40E17009B35ED /* CoursesVM.swift in Sources */,
+				F108CF232AE41F4C00D31D93 /* APIModel.swift in Sources */,
+				F1C83A952AEECA32000B5589 /* LoginVM.swift in Sources */,
+				F1F1BE162B093B2B0089FA26 /* ClassesVM.swift in Sources */,
+				F108CF2F2AE4227300D31D93 /* LoginView.swift in Sources */,
+				F1F1BE1A2B0940520089FA26 /* ClassCell.swift in Sources */,
+				F129990E2AF3D1CF009B35ED /* LoginRegisterView.swift in Sources */,
+				F108CF292AE4202E00D31D93 /* SecManager.swift in Sources */,
+				F1D55BFD2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift in Sources */,
+				F12999182AF41025009B35ED /* TestData.swift in Sources */,
+				F1F1BE1E2B0996AC0089FA26 /* CourseCell.swift in Sources */,
+				F1C83A932AEEC992000B5589 /* BiometryLogin.swift in Sources */,
+				F129991F2AF43784009B35ED /* CourseCellHeader.swift in Sources */,
+				F1D55C0E2B013A5B00B58405 /* ContentView.swift in Sources */,
+				F139E64B2B1247B200D56910 /* BoughtProgramsVM.swift in Sources */,
+				F129990A2AF3A7F0009B35ED /* Extensions.swift in Sources */,
+				F14BF4032B0A975200CDB52C /* SettingsView.swift in Sources */,
+				F1F1BE142B0939330089FA26 /* ClassesView.swift in Sources */,
+				F139E64F2B13827D00D56910 /* BoughtProgramCell.swift in Sources */,
+				F1DDBB3B2AE5925C00ECFF7A /* Network.swift in Sources */,
+				F108CF312AE4228100D31D93 /* RegisterView.swift in Sources */,
+				F1CDE0F42AF53203006BD246 /* CreateProfileView.swift in Sources */,
+				F128DE4C2AE060CB00EA040C /* Interface.swift in Sources */,
+				F1D55C082B00233000B58405 /* ProgramCell.swift in Sources */,
+				F14BF4052B0ABD9300CDB52C /* CustomAlertLogout.swift in Sources */,
 				F128DE222AE0609200EA040C /* HOLISTICA1App.swift in Sources */,
+				F1D55C0C2B0137DE00B58405 /* CoursesView.swift in Sources */,
+				F1D55C0A2B00243400B58405 /* ProgramsVM.swift in Sources */,
+				F12D1F332B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift in Sources */,
+				F1D55C042AFEA8E600B58405 /* ProgramsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +631,8 @@
 				DEVELOPMENT_TEAM = RU224KV7KL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HOLISTICA1/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app will validate your identity.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +662,8 @@
 				DEVELOPMENT_TEAM = RU224KV7KL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HOLISTICA1/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app will validate your identity.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +798,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F128DE4E2AE0688A00EA040C /* XCRemoteSwiftPackageReference "BCSecure2023" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/applecodingacademy/BCSecure2023.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+		F12D1F2F2B1D1D21003E4DC1 /* XCRemoteSwiftPackageReference "MRNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mridruejo5/MRNetwork.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F128DE4F2AE0688A00EA040C /* BCSecure2023 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F128DE4E2AE0688A00EA040C /* XCRemoteSwiftPackageReference "BCSecure2023" */;
+			productName = BCSecure2023;
+		};
+		F12D1F302B1D1D21003E4DC1 /* MRNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F12D1F2F2B1D1D21003E4DC1 /* XCRemoteSwiftPackageReference "MRNetwork" */;
+			productName = MRNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F128DE162AE0609200EA040C /* Project object */;
 }
