@@ -24,16 +24,25 @@ struct ContentView: View {
                     .transition(.opacity.combined(with: .move(edge: .bottom)))
             } else {
                 CoursesView()
-                    .onAppear {
-                        loginVM.initLogin()
-                        Task {
-                            await boughtProgramsVM.getBoughtPrograms()
-                        }
-                    }
             }
         }
         .animation(.default, value: loginVM.showLogin)
         .animation(.spring().delay(1), value: loginVM.showLogin)
+        .onChange(of: loginVM.showLogin) {newValue in
+            if !newValue {
+                Task {
+                    await loginVM.getUserInfo()
+                    await boughtProgramsVM.getBoughtPrograms()
+                }
+            }
+        }
+        .onAppear {
+            loginVM.initLogin()
+            Task {
+                await boughtProgramsVM.getBoughtPrograms()
+            }
+        }
+        
         .alert("User log in error",
                isPresented: $loginVM.showAlert) {
             Button(action: {}, label: { Text("OK") })

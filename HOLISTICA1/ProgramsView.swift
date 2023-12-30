@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProgramsView: View {
     @ObservedObject var programsVM:ProgramsVM
+    
+    @State private var searchText = ""
 
     var body: some View {
         NavigationStack {
@@ -40,6 +42,8 @@ struct ProgramsView: View {
                     } message: {
                         Text(programsVM.message)
                     }
+                    .padding()
+                    .searchable(text: $searchText)
         }
     }
 }

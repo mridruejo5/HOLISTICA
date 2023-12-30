@@ -14,11 +14,9 @@ struct ProgramCellHeader: View {
         VStack(alignment: .center, spacing: 4) {
             Text("\(program.name)")
                 .font(.title2)
+                .bold()
                 .foregroundColor(.primary)
-            
-            Text(program.description)
-                .font(.callout)
-                .foregroundColor(.secondary)
+
         }
         .multilineTextAlignment(.center)
         .clipShape(.rect(cornerRadius: 10))

@@ -16,12 +16,6 @@ struct CreateUser: Codable {
     let dateCreated: String
 }
 
-struct ValidateUser: Codable {
-    let APIKey:String
-    let email:String
-    let token:String
-}
-
 struct TokenResponse: Codable {
     let token:String
 }
@@ -37,4 +31,14 @@ struct CreateProfile: Codable {
     let experience: YogaExperience
     let goal:YogaGoals
     let image:String?
+}
+
+struct SIWARequest: Codable {
+    let name:String
+    let familyName:String
+}
+
+struct CertificateRequest: Codable {
+    let deviceID:UUID
+    let certificate:String
 }

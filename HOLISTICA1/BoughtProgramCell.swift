@@ -13,16 +13,18 @@ struct BoughtProgramCell: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
+            VStack {
                 Text(program.name)
                     .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
                 Text("Status: \(program.programState.rawValue)")
                     .font(.callout)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding()
             Spacer()
             RoundedRectangle(cornerRadius: 10)
-                .frame(width: 50, height: 50, alignment: .center)
+                .frame(width: 70, height: 50, alignment: .center)
                 .foregroundStyle(Color.clear)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
@@ -38,13 +40,15 @@ struct BoughtProgramCell: View {
                 }
                 .padding(.trailing)
         }
-        .overlay {
+        .background {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(Color.sand)
+        }
+        .background {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.redwood, lineWidth: 5)
+                .shadow(radius: 5)
         }
-        .background(Color.sand)
-        .cornerRadius(10)
-        .shadow(radius: 4)
     }
 }
 

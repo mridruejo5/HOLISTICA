@@ -94,13 +94,13 @@ struct ProgramClasses: Codable, Hashable, Identifiable {
     let name:String
     let description:String
     let class_status:Status
-    //let videos:[ClassesVideos]
+    let video:ClassesVideos?
 }
 
 struct ClassesVideos: Codable, Hashable, Identifiable {
     let id:UUID
     let title:String
     let url:String
-    let upload_date:Date
-    let status:Status
+    let upload_date:Date?
+    let status:Status?
 }

@@ -1,8 +1,8 @@
 //
-//  CoursesView.swift
+//  CoursesView2.swift
 //  HOLISTICA1
 //
-//  Created by Miguel Ridruejo on 12/11/23.
+//  Created by Miguel Ridruejo on 17/12/23.
 //
 
 import SwiftUI
@@ -16,72 +16,69 @@ struct CoursesView: View {
     
     var body: some View {
         NavigationStack {
-            List {
+            ScrollView {
+                Divider()
+                
                 WelcomeToHolisticaCell(user: loginVM.userInfo)
-                    .listRowSeparator(.hidden)
                 
                 Divider()
-                    .foregroundStyle(Color.charcoal)
                 
-                Section {
-                    if boughtProgramsVM.boughtPrograms.isEmpty {
-                        MyProgramsEmptyCell()
-                    } else {
-                        ForEach(coursesVM.courses) { course in
-                            let programsForCourse = boughtProgramsVM.boughtProgramsForCourse(course: course)
+                Text("Your programs")
+                    .font(.title2)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding()
+                
+                if boughtProgramsVM.boughtPrograms.isEmpty {
+                    MyProgramsEmptyCell()
+                } else {
+                    ForEach(coursesVM.courses) { course in
+                        let programsForCourse = boughtProgramsVM.boughtProgramsForCourse(course: course)
+                        
+                        if !programsForCourse.isEmpty {
+                            Text(course.name)
+                                .font(.headline)
+                                .foregroundStyle(Color.secondary)
+                                .bold()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal)
                             
-                                    if !programsForCourse.isEmpty {
-                                        Section {
-                                            ForEach(boughtProgramsVM.boughtProgramsForCourse(course: course)) { program in
-                                                ZStack {
-                                                    NavigationLink(destination: ClassesView(classesVM: ClassesVM(program: program), program: program)) {
-                                                        EmptyView().opacity(0.0)
-                                                            .padding(.horizontal)
-                                                    }
-                                                    BoughtProgramCell(program: program)
-                                                }
-                                            }
-                                        } header: {
-                                            Text(course.name)
-                                                .font(.headline)
-                                                .foregroundStyle(Color.secondary)
-                                                .bold()
-                                        }
+                            ForEach(boughtProgramsVM.boughtProgramsForCourse(course: course)) { program in
+                                ZStack {
+                                    NavigationLink(destination: ClassesView(classesVM: ClassesVM(program: program), program: program)) {
+                                        BoughtProgramCell(program: program)
+                                            .foregroundStyle(Color.primary)
+                                            .padding()
+                                    }
                                 }
                             }
                         }
-                    } header: {
-                        Text("Your programs")
-                            .font(.title3)
-                            .foregroundStyle(Color.gunmetal)
-                            .bold()
-                        }
-                    .listRowSeparator(.hidden)
+                    }
+                }
                 
                 Divider()
-                    .foregroundStyle(Color.charcoal)
+                    .padding(.top)
                 
-                Section {
+                VStack {
+                    Text("Courses")
+                        .font(.title2)
+                        .bold()
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .center)
+
                     ForEach(coursesVM.courses) { course in
                         ZStack {
                             NavigationLink(destination: ProgramsView(programsVM: ProgramsVM(course: course))) {
-                                EmptyView().opacity(0.0)
-                                    .padding(.horizontal)
+                                CourseCell(course: course)
+                                    .foregroundStyle(Color.primary)
+                                    .padding(.vertical)
                             }
-                            CourseCell(course: course)
                         }
-                        .padding(.bottom, 20)
                     }
-                } header: {
-                    Text("Courses")
-                        .font(.title3)
-                        .foregroundStyle(Color.gunmetal)
-                        .bold()
                 }
-                .listRowSeparator(.hidden)
             }
+            .background(Color.white)
             .navigationTitle("HOME")
-            .scrollContentBackground(.hidden)
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     if let userInfo = loginVM.userInfo {
@@ -112,14 +109,6 @@ struct CoursesView: View {
             .sheet(isPresented: $showSettings) {
                 SettingsView()
                     .frame(alignment: .top)
-            }
-            .onChange(of: loginVM.showLogin) { oldValue, newValue in
-                if !newValue {
-                    Task {
-                        await loginVM.getUserInfo()
-                        //await boughtProgramsVM.getBoughtPrograms()
-                    }
-                }
             }
         }
     }

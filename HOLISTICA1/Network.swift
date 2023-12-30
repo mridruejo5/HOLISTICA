@@ -9,6 +9,7 @@ import SwiftUI
 //import ACNetwork
 import BCSecure2023
 import MRNetwork
+import CryptoKit
 
 final class Network {
     static let shared = Network()
@@ -29,10 +30,6 @@ final class Network {
         try await MRNetwork.shared.postV(request: .post(url: .createUsers, data: user), statusOK: 201)
     }
     
-    func validateUser(validation:ValidateUser) async throws {
-        try await MRNetwork.shared.postV(request: .post(url: .validateUsr, data: validation))
-    }
-    
     func loginUser(user:String, password:String) async throws {
         guard let token = "\(user):\(password)".data(using: .utf8)?.base64EncodedString() else {
             throw NetworkError.unknown
@@ -51,6 +48,30 @@ final class Network {
             // AQUI HABRIA QUE LANZAR UN ERROR QUE AVISARA DEL ERROR QUE HA HABIDO, CONTACTAR CON EL ADMIN, ETC. HACER ESTO AMPLIANDO EL NETWORK ERRORS DE LA LIBRERIA DE NETWORK CON ERRORES DE SEGURIDAD
             print("JWT not valid nor verified")
         }
+    }
+    
+    func sendSIWALogin(token: Data, request: SIWARequest) async throws {
+        guard let tokenString = String(data: token, encoding: .utf8) else { return }
+        let response = try await MRNetwork.shared.getJSONV(request:
+                .post(url: .siwaLogin, data: request, token: tokenString), type: TokenResponse.self)
+        
+        guard let tokenData = response.token.data(using: .utf8) else {
+            throw NetworkError.unknown
+        }
+        if SecManager.shared.isValidJWT(jwt: tokenData) {
+            print("JWT VALID")
+            SecKeyStore.shared.storeKey(key: tokenData, label: "TO")
+        } else {
+            // AQUI HABRIA QUE LANZAR UN ERROR QUE AVISARA DEL ERROR QUE HA HABIDO, CONTACTAR CON EL ADMIN, ETC. HACER ESTO AMPLIANDO EL NETWORK ERRORS DE LA LIBRERIA DE NETWORK CON ERRORES DE SEGURIDAD
+            print("JWT not valid nor verified")
+        }
+    }
+    
+    func registerDevice(request:CertificateRequest) async throws {
+        let response = try await MRNetwork.shared.getJSONV(request:
+                .post(url: .registerDevice, data: request), type: CertificateRequest.self)
+        
+        try SecManager.shared.getSymmetricKey(clientCert: response.certificate)
     }
     
     private func getJSONToken<T:Codable>(url:URL, type:T.Type) async throws -> T {
@@ -98,6 +119,10 @@ final class Network {
     
     func classesByProgram(program:UUID) async throws -> [ProgramClasses] {
         try await getJSONToken(url: .getClassesByProgram(program: program), type: [ProgramClasses].self)
+    }
+    
+    func videoByClass(aClass:UUID) async throws -> ClassesVideos {
+        try await getJSONToken(url: .getVideoForClass(aClass: aClass), type: ClassesVideos.self)
     }
     
 }

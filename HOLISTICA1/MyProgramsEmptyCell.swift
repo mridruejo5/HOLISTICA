@@ -24,6 +24,7 @@ struct MyProgramsEmptyCell: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .padding()
     }
 }
 

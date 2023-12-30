@@ -13,11 +13,10 @@ struct ProgramCell: View {
     var body: some View {
         VStack(alignment: .center) {
             
-            /*
             if let image = program.image, let uimage = UIImage(data: image) {
                 Image(uiImage: uimage)
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
                     .frame(width: 350, height: 225)
                     .cornerRadius(10)
                     .overlay {
@@ -25,7 +24,8 @@ struct ProgramCell: View {
                             .stroke(Color.gunmetal, lineWidth: 5)
                     }
                     .background(Color.charcoal)
-            }*/
+            }
+            /*
             Image("EliteProgram")
                 .resizable()
                 .scaledToFit()
@@ -33,11 +33,17 @@ struct ProgramCell: View {
                     Rectangle()
                         .stroke(Color.gunmetal, lineWidth: 5)
                 }
+             */
             VStack {
                 Text("\(program.name)")
                     .font(.headline)
                     .foregroundColor(.primary)
                 
+                Text("Level: \(program.difficulty.rawValue)")
+                    .font(.callout)
+                    .foregroundColor(.white)
+                
+                    .padding(.bottom)
                 Text(program.description)
                     .font(.subheadline)
                     .foregroundStyle(Color.white)

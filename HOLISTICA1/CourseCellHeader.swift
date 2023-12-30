@@ -12,28 +12,15 @@ struct CourseCellHeader: View {
     
     var body: some View {
         HStack(spacing: 10) {
-            if let iconData = course.icon, let uiIconImage = UIImage(data: iconData) {
-                Image(uiImage: uiIconImage)
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
-                    .frame(width: 80, height: 80)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.redwood, lineWidth: 5)
-                    }
-                    .background(Color.almond)
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
-                    .padding(.trailing)
-            }
             VStack(alignment: .leading, spacing: 4) {
-                Text("\(course.name) Programs")
-                    .font(.title)
+                Text("Explore Our \(course.name) Programs")
+                    .font(.title2)
+                    .bold()
                     .foregroundColor(.primary)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.clear)
     }
 }
 

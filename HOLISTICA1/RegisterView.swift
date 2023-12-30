@@ -9,7 +9,7 @@ import SwiftUI
 import MRNetwork
 
 struct RegisterView: View {
-    @AppStorage("email") var email = ""
+
     @Binding var showRegister:Bool
     @Binding var showLogin:Bool
     
@@ -61,7 +61,6 @@ struct RegisterView: View {
                 Task {
                     do {
                         try await Network.shared.createUser(user: new)
-                        email = new.email
                         showLogin = !SecManager.shared.isUserLogged()
                         successRegistrationAlert.toggle()
                     } catch let error as NetworkError {

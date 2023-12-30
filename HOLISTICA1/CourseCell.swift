@@ -12,25 +12,9 @@ struct CourseCell: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            if let icon = course.icon, let uimage = UIImage(data: icon) {
-                Image(uiImage: uimage)
-                    .resizable()
-                    .scaledToFill()
-                    .padding()
-                    .frame(width: 80, height: 80)
-                    .cornerRadius(10)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.redwood, lineWidth: 5)
-                    }
-                    .background(Color.almond)
-                    .cornerRadius(10)
-                    .shadow(radius: 4)
-            }
-            
             VStack(alignment: .center, spacing: 4) {
                 Text("\(course.name) programs")
-                    .font(.title2)
+                    .font(.title)
                     .bold()
                     .foregroundColor(Color.sand)
                     .foregroundColor(.primary)
@@ -42,11 +26,12 @@ struct CourseCell: View {
                     .foregroundStyle(Color.white)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
+                
             }
         }
-        .frame(width: 275, height: 250, alignment: .center)
+        .frame(width: 320, height: 250, alignment: .center)
         .padding()
-        //.background(Color.sand)
+
         .background {
             if let image = course.image, let uimage = UIImage(data: image) {
                 Image(uiImage: uimage)
@@ -55,7 +40,7 @@ struct CourseCell: View {
                     .opacity(0.8)
                     .overlay {
                         Rectangle()
-                            .opacity(0.3)
+                            .opacity(0.4)
                     }
             }
         }

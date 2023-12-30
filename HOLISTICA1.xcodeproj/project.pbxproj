@@ -19,6 +19,7 @@
 		F128DE3F2AE0609400EA040C /* HOLISTICA1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DE3E2AE0609400EA040C /* HOLISTICA1UITestsLaunchTests.swift */; };
 		F128DE4C2AE060CB00EA040C /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DE4B2AE060CB00EA040C /* Interface.swift */; };
 		F128DE502AE0688A00EA040C /* BCSecure2023 in Frameworks */ = {isa = PBXBuildFile; productRef = F128DE4F2AE0688A00EA040C /* BCSecure2023 */; };
+		F1290B472B2F857F00DD628B /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1290B462B2F857F00DD628B /* CoursesView.swift */; };
 		F129990A2AF3A7F0009B35ED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12999092AF3A7F0009B35ED /* Extensions.swift */; };
 		F129990E2AF3D1CF009B35ED /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F129990D2AF3D1CF009B35ED /* LoginRegisterView.swift */; };
 		F12999142AF40DB4009B35ED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12999132AF40DB4009B35ED /* Model.swift */; };
@@ -33,6 +34,8 @@
 		F139E64F2B13827D00D56910 /* BoughtProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139E64E2B13827C00D56910 /* BoughtProgramCell.swift */; };
 		F14BF4032B0A975200CDB52C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4022B0A975200CDB52C /* SettingsView.swift */; };
 		F14BF4052B0ABD9300CDB52C /* CustomAlertLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */; };
+		F1725CE82B3772BB00E70827 /* SIWAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1725CE72B3772BB00E70827 /* SIWAView.swift */; };
+		F1BDFD802B3C987000F4B25C /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BDFD7F2B3C987000F4B25C /* ClassCell.swift */; };
 		F1C83A932AEEC992000B5589 /* BiometryLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C83A922AEEC992000B5589 /* BiometryLogin.swift */; };
 		F1C83A952AEECA32000B5589 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C83A942AEECA32000B5589 /* LoginVM.swift */; };
 		F1CDE0F42AF53203006BD246 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CDE0F32AF53203006BD246 /* CreateProfileView.swift */; };
@@ -40,13 +43,11 @@
 		F1D55C042AFEA8E600B58405 /* ProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C032AFEA8E600B58405 /* ProgramsView.swift */; };
 		F1D55C082B00233000B58405 /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C072B00233000B58405 /* ProgramCell.swift */; };
 		F1D55C0A2B00243400B58405 /* ProgramsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C092B00243400B58405 /* ProgramsVM.swift */; };
-		F1D55C0C2B0137DE00B58405 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C0B2B0137DD00B58405 /* CoursesView.swift */; };
 		F1D55C0E2B013A5B00B58405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D55C0D2B013A5B00B58405 /* ContentView.swift */; };
 		F1DDBB3B2AE5925C00ECFF7A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDBB3A2AE5925C00ECFF7A /* Network.swift */; };
 		F1F1BE142B0939330089FA26 /* ClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE132B0939330089FA26 /* ClassesView.swift */; };
 		F1F1BE162B093B2B0089FA26 /* ClassesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE152B093B2B0089FA26 /* ClassesVM.swift */; };
 		F1F1BE182B093E3D0089FA26 /* ProgramCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE172B093E3D0089FA26 /* ProgramCellHeader.swift */; };
-		F1F1BE1A2B0940520089FA26 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE192B0940520089FA26 /* ClassCell.swift */; };
 		F1F1BE1E2B0996AC0089FA26 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1BE1D2B0996AC0089FA26 /* CourseCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		F128DE3E2AE0609400EA040C /* HOLISTICA1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOLISTICA1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F128DE4B2AE060CB00EA040C /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		F128DE4D2AE0618A00EA040C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F1290B462B2F857F00DD628B /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		F12999092AF3A7F0009B35ED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F129990D2AF3D1CF009B35ED /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
 		F12999132AF40DB4009B35ED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -96,6 +98,9 @@
 		F139E64E2B13827C00D56910 /* BoughtProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtProgramCell.swift; sourceTree = "<group>"; };
 		F14BF4022B0A975200CDB52C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertLogout.swift; sourceTree = "<group>"; };
+		F1725CE72B3772BB00E70827 /* SIWAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIWAView.swift; sourceTree = "<group>"; };
+		F1BDFD7F2B3C987000F4B25C /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		F1C23E472B37A81900EC42DF /* HOLISTICA1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HOLISTICA1.entitlements; sourceTree = "<group>"; };
 		F1C83A922AEEC992000B5589 /* BiometryLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryLogin.swift; sourceTree = "<group>"; };
 		F1C83A942AEECA32000B5589 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		F1CDE0F32AF53203006BD246 /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
@@ -103,13 +108,11 @@
 		F1D55C032AFEA8E600B58405 /* ProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsView.swift; sourceTree = "<group>"; };
 		F1D55C072B00233000B58405 /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
 		F1D55C092B00243400B58405 /* ProgramsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsVM.swift; sourceTree = "<group>"; };
-		F1D55C0B2B0137DD00B58405 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		F1D55C0D2B013A5B00B58405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1DDBB3A2AE5925C00ECFF7A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		F1F1BE132B0939330089FA26 /* ClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesView.swift; sourceTree = "<group>"; };
 		F1F1BE152B093B2B0089FA26 /* ClassesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesVM.swift; sourceTree = "<group>"; };
 		F1F1BE172B093E3D0089FA26 /* ProgramCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCellHeader.swift; sourceTree = "<group>"; };
-		F1F1BE192B0940520089FA26 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		F1F1BE1D2B0996AC0089FA26 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,10 +202,11 @@
 		F128DE202AE0609200EA040C /* HOLISTICA1 */ = {
 			isa = PBXGroup;
 			children = (
+				F1C23E472B37A81900EC42DF /* HOLISTICA1.entitlements */,
 				F129991A2AF4142B009B35ED /* ViewModels */,
 				F12999192AF413FC009B35ED /* LoginViews */,
 				F1D55C0D2B013A5B00B58405 /* ContentView.swift */,
-				F1D55C0B2B0137DD00B58405 /* CoursesView.swift */,
+				F1290B462B2F857F00DD628B /* CoursesView.swift */,
 				F14BF4022B0A975200CDB52C /* SettingsView.swift */,
 				F1D55C032AFEA8E600B58405 /* ProgramsView.swift */,
 				F1F1BE132B0939330089FA26 /* ClassesView.swift */,
@@ -258,6 +262,7 @@
 				F108CF2E2AE4227300D31D93 /* LoginView.swift */,
 				F1C83A922AEEC992000B5589 /* BiometryLogin.swift */,
 				F108CF302AE4228100D31D93 /* RegisterView.swift */,
+				F1725CE72B3772BB00E70827 /* SIWAView.swift */,
 				F129990D2AF3D1CF009B35ED /* LoginRegisterView.swift */,
 				F1CDE0F32AF53203006BD246 /* CreateProfileView.swift */,
 			);
@@ -285,7 +290,7 @@
 				F1D55BFC2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift */,
 				F1D55C072B00233000B58405 /* ProgramCell.swift */,
 				F1F1BE172B093E3D0089FA26 /* ProgramCellHeader.swift */,
-				F1F1BE192B0940520089FA26 /* ClassCell.swift */,
+				F1BDFD7F2B3C987000F4B25C /* ClassCell.swift */,
 				F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */,
 				F139E64E2B13827C00D56910 /* BoughtProgramCell.swift */,
 				F12D1F322B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift */,
@@ -436,11 +441,11 @@
 				F12C67352AF828DE0034AD97 /* UserProfileVM.swift in Sources */,
 				F139E64D2B1362A200D56910 /* PurchaseView.swift in Sources */,
 				F12999162AF40E17009B35ED /* CoursesVM.swift in Sources */,
+				F1290B472B2F857F00DD628B /* CoursesView.swift in Sources */,
 				F108CF232AE41F4C00D31D93 /* APIModel.swift in Sources */,
 				F1C83A952AEECA32000B5589 /* LoginVM.swift in Sources */,
 				F1F1BE162B093B2B0089FA26 /* ClassesVM.swift in Sources */,
 				F108CF2F2AE4227300D31D93 /* LoginView.swift in Sources */,
-				F1F1BE1A2B0940520089FA26 /* ClassCell.swift in Sources */,
 				F129990E2AF3D1CF009B35ED /* LoginRegisterView.swift in Sources */,
 				F108CF292AE4202E00D31D93 /* SecManager.swift in Sources */,
 				F1D55BFD2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift in Sources */,
@@ -458,10 +463,11 @@
 				F108CF312AE4228100D31D93 /* RegisterView.swift in Sources */,
 				F1CDE0F42AF53203006BD246 /* CreateProfileView.swift in Sources */,
 				F128DE4C2AE060CB00EA040C /* Interface.swift in Sources */,
+				F1725CE82B3772BB00E70827 /* SIWAView.swift in Sources */,
 				F1D55C082B00233000B58405 /* ProgramCell.swift in Sources */,
 				F14BF4052B0ABD9300CDB52C /* CustomAlertLogout.swift in Sources */,
 				F128DE222AE0609200EA040C /* HOLISTICA1App.swift in Sources */,
-				F1D55C0C2B0137DE00B58405 /* CoursesView.swift in Sources */,
+				F1BDFD802B3C987000F4B25C /* ClassCell.swift in Sources */,
 				F1D55C0A2B00243400B58405 /* ProgramsVM.swift in Sources */,
 				F12D1F332B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift in Sources */,
 				F1D55C042AFEA8E600B58405 /* ProgramsView.swift in Sources */,
@@ -553,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -610,7 +616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -625,6 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HOLISTICA1/HOLISTICA1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HOLISTICA1/Preview Content\"";
@@ -636,8 +643,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HOLISTICA1/HOLISTICA1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HOLISTICA1/Preview Content\"";
@@ -667,8 +675,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

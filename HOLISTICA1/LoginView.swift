@@ -7,12 +7,14 @@
 
 import SwiftUI
 import MRNetwork
+import AuthenticationServices
 
 struct LoginView: View {
     
     @Binding var showLogin:Bool
     
     @State var showRegister = false
+    @State var showRegisterSIWA = false
     
     @State var user = ""
     @State var pass = ""
@@ -65,12 +67,42 @@ struct LoginView: View {
             .buttonStyle(.borderedProminent)
             .tint(Color.charcoal)
             .padding(.top, 10)
-        Button {
-            showRegister.toggle()
-        } label: {
-            Text("Press to Register")
+            
+            
+            Text("- or - ")
+                .font(.caption)
+                .frame(maxWidth: .infinity, alignment: .center)
+            
+        VStack {
+            
+            SignInWithAppleButton(.signIn) { request in
+                request.requestedScopes = [.email, .fullName]
+            } onCompletion: { result in
+                switch result {
+                case .success(let authResult):
+                    SecManager.shared.SIWACredentials(credential: authResult.credential)
+                case .failure(let error):
+                    message = "Sign in error: \(error.localizedDescription)"
+                    showAlert.toggle()
+                }
+            }
+            .signInWithAppleButtonStyle(.black)
+            .frame(height: 35)
+            
+            Button {
+                showRegister.toggle()
+            } label: {
+                Text("Press to Register")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+            }
+                
+            .alert("User login error", isPresented: $showAlert) {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: { Text("Ok") })
+            } message: {
+                Text(message)
+            }
         }
-        .padding()
             
             
         Text("Copyright 2023 – holistica.es")

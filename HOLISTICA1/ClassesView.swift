@@ -12,6 +12,7 @@ struct ClassesView: View {
     @ObservedObject var classesVM:ClassesVM
     @EnvironmentObject var boughtProgramsVM:BoughtProgramsVM
     
+    
     @State var showPurchasedView = false
     
     let program:CoursePrograms
@@ -38,6 +39,7 @@ struct ClassesView: View {
                 .tint(Color.blue)
                 .padding(.bottom)
                 .padding(.horizontal)
+                
             } else {
                 Button {
                     showPurchasedView.toggle()
@@ -57,7 +59,9 @@ struct ClassesView: View {
                 .padding(.top)
                 .padding(.horizontal)
             List(classesVM.classes) { aclass in
-                ClassCell(aClass: aclass)
+                if let video = aclass.video {
+                    ClassCell(aClass: aclass, video: video)
+                }
             }
             .listStyle(.plain)
         }
@@ -75,15 +79,6 @@ struct ClassesView: View {
                 .frame(alignment: .top)
         }
     }
-    /*
-    var header: some View {
-        HStack {
-            Text("Classes")
-                .font(.title)
-        }
-        .padding(.horizontal)
-    }
-     */
 }
 
 

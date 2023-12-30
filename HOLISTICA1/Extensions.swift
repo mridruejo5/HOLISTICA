@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+extension Notification.Name {
+    static let loginSIWAOK = Notification.Name("LOGINSIWAOK")
+}
+
 extension Color {
     static let charcoal = Color(.sRGB, red: 54/255, green: 77/255, blue: 95/255)
     static let sand = Color(.sRGB, red: 244/255, green: 238/255, blue: 232/255)
@@ -15,6 +19,8 @@ extension Color {
     static let cadetGray = Color(.sRGB, red: 132/255, green: 158/255, blue: 169/255)
     static let gunmetal = Color(.sRGB, red: 22/255, green: 36/255, blue: 46/255)
     static let black = Color(.sRGB, red: 29/255, green: 29/255, blue: 27/255)
+    
+    
 }
 
 struct NoArrowNavigationButtonStyle: PrimitiveButtonStyle {
