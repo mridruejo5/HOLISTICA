@@ -14,7 +14,7 @@ enum CourseType: String, Codable, Identifiable {
 }
 
 enum DifficultyTypes: String, Codable, Identifiable {
-    case beginner, intermediate, advanced, expert, elite
+    case beginner, intermidiate, advanced, expert, elite
     
     var id:Self { self }
 }
@@ -61,10 +61,10 @@ struct Course: Codable, Hashable, Identifiable {
     let id:UUID
     let name:String
     let description:String
-    let image:Data?
+    let image:String?
     let catchphrase: String
     let type:CourseType
-    let icon:Data?
+    let icon:String?
 }
 
 struct UserProfile: Codable, Hashable, Identifiable {
@@ -82,7 +82,7 @@ struct CoursePrograms: Codable, Hashable, Identifiable {
     let name:String
     let description:String
     let difficulty:DifficultyTypes
-    let image: Data?
+    let image: String?
     let programState:Status
     let courseID:UUID
     //let classes:[ProgramClasses]

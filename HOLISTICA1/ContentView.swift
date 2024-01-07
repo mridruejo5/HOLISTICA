@@ -33,6 +33,7 @@ struct ContentView: View {
                 Task {
                     await loginVM.getUserInfo()
                     await boughtProgramsVM.getBoughtPrograms()
+                    await coursesVM.getAllCourses()
                 }
             }
         }

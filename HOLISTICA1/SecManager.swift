@@ -31,7 +31,7 @@ final class SecManager {
         }
     }
     
-    var keyAgreement:SymmetricKey!
+    //var keyAgreement:SymmetricKey!
     
     var biometry:LABiometryType = .none
     var isBiometryLogged = false
@@ -45,9 +45,10 @@ final class SecManager {
             biometry = context.biometryType
         }
         SIWAInit()
-        cipherInit()
+        //cipherInit()
     }
     
+    /*
     func cipherInit() {
         if SecKeyStore.shared.readKey(label: "PRIVATEKEY") == nil {
             let keyAgreement = P256.KeyAgreement.PrivateKey()
@@ -73,7 +74,7 @@ final class SecManager {
             }
         }
     }
-    
+
     func getSymmetricKey(clientCert: String) throws {
         guard let clientCertData = Data(base64Encoded: clientCert),
               let keyPrivate = SecKeyStore.shared.readKey(label: "PRIVATEKEY") else { return }
@@ -86,6 +87,7 @@ final class SecManager {
         //print(symmetricData.base64EncodedString())
         SecKeyStore.shared.storeKey(key: symmetricData, label: "SYMMETRICKEY")
     }
+     */
     
     func SIWAInit() {
         let provider = ASAuthorizationAppleIDProvider()
@@ -134,8 +136,8 @@ final class SecManager {
             let symmetricKey = try getSK
             let verify = jwtParts[0] + "." + jwtParts[1]
             return HMAC<SHA256>.isValidAuthenticationCode(sign,
-                                                   authenticating: verify.data(using: .utf8)!,
-                                                   using: symmetricKey)
+                                                          authenticating: verify.data(using: .utf8)!,
+                                                          using: symmetricKey)
         } catch {
             return false
         }

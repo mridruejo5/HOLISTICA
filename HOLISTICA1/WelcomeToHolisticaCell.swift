@@ -18,11 +18,13 @@ struct WelcomeToHolisticaCell: View {
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
                 Text(user.name)
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
             }
             .frame(maxWidth: .infinity, alignment: .center)

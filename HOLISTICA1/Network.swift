@@ -67,12 +67,14 @@ final class Network {
         }
     }
     
+    /*
     func registerDevice(request:CertificateRequest) async throws {
         let response = try await MRNetwork.shared.getJSONV(request:
                 .post(url: .registerDevice, data: request), type: CertificateRequest.self)
         
         try SecManager.shared.getSymmetricKey(clientCert: response.certificate)
     }
+     */
     
     private func getJSONToken<T:Codable>(url:URL, type:T.Type) async throws -> T {
         try await MRNetwork.shared.getJSONV(request: .get(url: url, token: SecManager.shared.getToken()), type: T.self, decoder: decoder)

@@ -16,7 +16,7 @@ struct CourseCell: View {
                 Text("\(course.name) programs")
                     .font(.title)
                     .bold()
-                    .foregroundColor(Color.sand)
+                    .foregroundColor(Color.white)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.center)
                     .padding(.top)
@@ -31,19 +31,35 @@ struct CourseCell: View {
         }
         .frame(width: 320, height: 250, alignment: .center)
         .padding()
-
         .background {
-            if let image = course.image, let uimage = UIImage(data: image) {
-                Image(uiImage: uimage)
-                    .resizable()
-                    .scaledToFill()
-                    .opacity(0.8)
-                    .overlay {
-                        Rectangle()
+            if let imageURLString = course.image, let imageURL = URL(string: imageURLString) {
+                AsyncImage(url: imageURL) { phase in
+                    switch phase {
+                    case .empty:
+                        Image(systemName: "photo") // Placeholder for failure
+                            .resizable()
+                            .scaledToFill()
                             .opacity(0.4)
+                    case .success(let loadedImage):
+                        loadedImage
+                            .resizable()
+                            .scaledToFill()
+                            .opacity(0.8)
+                            .overlay {
+                                Rectangle()
+                                    .opacity(0.4)
+                            }
+                    case .failure:
+                        Color.cadetGray // Placeholder while loading
+                    @unknown default:
+                        EmptyView()
                     }
+                }
+            } else {
+                Color.cadetGray // Placeholder for invalid URL
             }
         }
+
         .cornerRadius(10)
         .background {
             RoundedRectangle(cornerRadius: 10)

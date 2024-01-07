@@ -31,14 +31,34 @@ struct BoughtProgramCell: View {
                         .stroke(Color.redwood, lineWidth: 2)
                 }
                 .background {
-                    if let image = program.image, let uimage = UIImage(data: image) {
-                        Image(uiImage: uimage)
+                    if let imageURL = program.image, let image = URL(string: imageURL) {
+                        AsyncImage(url: image) { phase in
+                            switch phase {
+                            case .empty:
+                                Color.clear // Placeholder while loading
+                            case .success(let loadedImage):
+                                loadedImage
+                                    .resizable()
+                                    .cornerRadius(10)
+                                    .shadow(radius: 4)
+                            case .failure:
+                                Image(systemName: "photo") // Placeholder for failure
+                                    .resizable()
+                                    .cornerRadius(10)
+                                    .shadow(radius: 4)
+                            @unknown default:
+                                EmptyView()
+                            }
+                        }
+                    } else {
+                        Image(systemName: "photo") // Placeholder for invalid URL
                             .resizable()
                             .cornerRadius(10)
                             .shadow(radius: 4)
                     }
                 }
                 .padding(.trailing)
+
         }
         .background {
             RoundedRectangle(cornerRadius: 10)

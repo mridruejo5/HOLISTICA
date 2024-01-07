@@ -36,6 +36,9 @@
 		F14BF4052B0ABD9300CDB52C /* CustomAlertLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */; };
 		F1725CE82B3772BB00E70827 /* SIWAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1725CE72B3772BB00E70827 /* SIWAView.swift */; };
 		F1BDFD802B3C987000F4B25C /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BDFD7F2B3C987000F4B25C /* ClassCell.swift */; };
+		F1C51E582B444A9200FFEFB6 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = F1C51E572B444A9200FFEFB6 /* AWSS3 */; };
+		F1C51E5A2B444A9200FFEFB6 /* AWSS3Control in Frameworks */ = {isa = PBXBuildFile; productRef = F1C51E592B444A9200FFEFB6 /* AWSS3Control */; };
+		F1C51E5C2B444A9200FFEFB6 /* AWSS3Outposts in Frameworks */ = {isa = PBXBuildFile; productRef = F1C51E5B2B444A9200FFEFB6 /* AWSS3Outposts */; };
 		F1C83A932AEEC992000B5589 /* BiometryLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C83A922AEEC992000B5589 /* BiometryLogin.swift */; };
 		F1C83A952AEECA32000B5589 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C83A942AEECA32000B5589 /* LoginVM.swift */; };
 		F1CDE0F42AF53203006BD246 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CDE0F32AF53203006BD246 /* CreateProfileView.swift */; };
@@ -121,7 +124,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C51E582B444A9200FFEFB6 /* AWSS3 in Frameworks */,
 				F128DE502AE0688A00EA040C /* BCSecure2023 in Frameworks */,
+				F1C51E5A2B444A9200FFEFB6 /* AWSS3Control in Frameworks */,
+				F1C51E5C2B444A9200FFEFB6 /* AWSS3Outposts in Frameworks */,
 				F12D1F312B1D1D21003E4DC1 /* MRNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +323,9 @@
 			packageProductDependencies = (
 				F128DE4F2AE0688A00EA040C /* BCSecure2023 */,
 				F12D1F302B1D1D21003E4DC1 /* MRNetwork */,
+				F1C51E572B444A9200FFEFB6 /* AWSS3 */,
+				F1C51E592B444A9200FFEFB6 /* AWSS3Control */,
+				F1C51E5B2B444A9200FFEFB6 /* AWSS3Outposts */,
 			);
 			productName = HOLISTICA1;
 			productReference = F128DE1E2AE0609200EA040C /* HOLISTICA1.app */;
@@ -393,6 +402,7 @@
 			packageReferences = (
 				F128DE4E2AE0688A00EA040C /* XCRemoteSwiftPackageReference "BCSecure2023" */,
 				F12D1F2F2B1D1D21003E4DC1 /* XCRemoteSwiftPackageReference "MRNetwork" */,
+				F1C51E562B444A9200FFEFB6 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
 			);
 			productRefGroup = F128DE1F2AE0609200EA040C /* Products */;
 			projectDirPath = "";
@@ -824,6 +834,14 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		F1C51E562B444A9200FFEFB6 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/awslabs/aws-sdk-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.33.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -836,6 +854,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F12D1F2F2B1D1D21003E4DC1 /* XCRemoteSwiftPackageReference "MRNetwork" */;
 			productName = MRNetwork;
+		};
+		F1C51E572B444A9200FFEFB6 /* AWSS3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1C51E562B444A9200FFEFB6 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSS3;
+		};
+		F1C51E592B444A9200FFEFB6 /* AWSS3Control */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1C51E562B444A9200FFEFB6 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSS3Control;
+		};
+		F1C51E5B2B444A9200FFEFB6 /* AWSS3Outposts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1C51E562B444A9200FFEFB6 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSS3Outposts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
