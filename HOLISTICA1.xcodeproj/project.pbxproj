@@ -30,7 +30,6 @@
 		F12D1F312B1D1D21003E4DC1 /* MRNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = F12D1F302B1D1D21003E4DC1 /* MRNetwork */; };
 		F12D1F332B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D1F322B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift */; };
 		F139E64B2B1247B200D56910 /* BoughtProgramsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139E64A2B1247B200D56910 /* BoughtProgramsVM.swift */; };
-		F139E64D2B1362A200D56910 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139E64C2B1362A200D56910 /* PurchaseView.swift */; };
 		F139E64F2B13827D00D56910 /* BoughtProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139E64E2B13827C00D56910 /* BoughtProgramCell.swift */; };
 		F14BF4032B0A975200CDB52C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4022B0A975200CDB52C /* SettingsView.swift */; };
 		F14BF4052B0ABD9300CDB52C /* CustomAlertLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */; };
@@ -97,7 +96,6 @@
 		F12C67342AF828DE0034AD97 /* UserProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVM.swift; sourceTree = "<group>"; };
 		F12D1F322B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgramsEmptyCell.swift; sourceTree = "<group>"; };
 		F139E64A2B1247B200D56910 /* BoughtProgramsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtProgramsVM.swift; sourceTree = "<group>"; };
-		F139E64C2B1362A200D56910 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		F139E64E2B13827C00D56910 /* BoughtProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtProgramCell.swift; sourceTree = "<group>"; };
 		F14BF4022B0A975200CDB52C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertLogout.swift; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 				F14BF4022B0A975200CDB52C /* SettingsView.swift */,
 				F1D55C032AFEA8E600B58405 /* ProgramsView.swift */,
 				F1F1BE132B0939330089FA26 /* ClassesView.swift */,
-				F139E64C2B1362A200D56910 /* PurchaseView.swift */,
 				F129991B2AF43580009B35ED /* Components */,
 				F108CF272AE4202100D31D93 /* Security */,
 				F108CF262AE41F9F00D31D93 /* System */,
@@ -449,7 +446,6 @@
 				F1F1BE182B093E3D0089FA26 /* ProgramCellHeader.swift in Sources */,
 				F12999142AF40DB4009B35ED /* Model.swift in Sources */,
 				F12C67352AF828DE0034AD97 /* UserProfileVM.swift in Sources */,
-				F139E64D2B1362A200D56910 /* PurchaseView.swift in Sources */,
 				F12999162AF40E17009B35ED /* CoursesVM.swift in Sources */,
 				F1290B472B2F857F00DD628B /* CoursesView.swift in Sources */,
 				F108CF232AE41F4C00D31D93 /* APIModel.swift in Sources */,

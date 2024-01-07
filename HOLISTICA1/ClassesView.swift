@@ -12,9 +12,7 @@ struct ClassesView: View {
     @ObservedObject var classesVM:ClassesVM
     @EnvironmentObject var boughtProgramsVM:BoughtProgramsVM
     
-    
-    @State var showPurchasedView = false
-    
+    @State var successfulPurchase = false
     let program:CoursePrograms
     
     @State var showAlert = false
@@ -42,7 +40,11 @@ struct ClassesView: View {
                 
             } else {
                 Button {
-                    showPurchasedView.toggle()
+                    Task {
+                        let boughtProgram = try await Network.shared.purchaseProgram(program: program.id)
+                        boughtProgramsVM.boughtPrograms.append(boughtProgram)
+                    }
+                    successfulPurchase.toggle()
                 } label: {
                     Text("Suscribe")
                         .frame(maxWidth: .infinity)
@@ -73,10 +75,20 @@ struct ClassesView: View {
         } message: {
             Text(classesVM.message)
         }
+        .alert("Error from server",
+               isPresented: $boughtProgramsVM.showAlert) {
+            Button(action: {}, label: { Text("Ok") })
+        } message: {
+            Text(boughtProgramsVM.message)
+        }
         
-        .fullScreenCover(isPresented: $showPurchasedView) {
-            PurchaseView(showPurchasedView: $showPurchasedView, program: program)
-                .frame(alignment: .top)
+        .alert("Suscribed to Program", isPresented: $successfulPurchase) {
+            Button {
+            } label: {
+                Text("Ok")
+            }
+        } message: {
+            Text(message)
         }
     }
 }
