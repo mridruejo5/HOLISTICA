@@ -50,13 +50,16 @@ struct CourseCell: View {
                                     .opacity(0.4)
                             }
                     case .failure:
-                        Color.cadetGray // Placeholder while loading
+                        Image(systemName: "photo") // Placeholder while loading
+                            .resizable()
+                            .scaledToFill()
+                            .opacity(0.4)
                     @unknown default:
                         EmptyView()
                     }
                 }
             } else {
-                Color.cadetGray // Placeholder for invalid URL
+                Color.almond // Placeholder for invalid URL
             }
         }
 
