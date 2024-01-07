@@ -29,7 +29,7 @@ struct CourseCell: View {
                 
             }
         }
-        .frame(width: 320, height: 250, alignment: .center)
+        .frame(width: 330, height: 250, alignment: .center)
         .padding()
         .background {
             if let imageURLString = course.image, let imageURL = URL(string: imageURLString) {
