@@ -34,6 +34,11 @@
 		F14BF4032B0A975200CDB52C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4022B0A975200CDB52C /* SettingsView.swift */; };
 		F14BF4052B0ABD9300CDB52C /* CustomAlertLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */; };
 		F1725CE82B3772BB00E70827 /* SIWAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1725CE72B3772BB00E70827 /* SIWAView.swift */; };
+		F1B47B092B4B602E00E88D77 /* HomeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B47B082B4B602E00E88D77 /* HomeVideo.swift */; };
+		F1B47B0C2B4B60AB00E88D77 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B47B0B2B4B60AB00E88D77 /* CustomVideoPlayer.swift */; };
+		F1B47B0F2B4B622600E88D77 /* ContentViewVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B47B0E2B4B622600E88D77 /* ContentViewVideo.swift */; };
+		F1B47B112B4C7A2200E88D77 /* DoubleTapSeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B47B102B4C7A2200E88D77 /* DoubleTapSeek.swift */; };
+		F1B47B132B4CB84400E88D77 /* CMTime+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B47B122B4CB84400E88D77 /* CMTime+Extensions.swift */; };
 		F1BDFD802B3C987000F4B25C /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BDFD7F2B3C987000F4B25C /* ClassCell.swift */; };
 		F1C51E582B444A9200FFEFB6 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = F1C51E572B444A9200FFEFB6 /* AWSS3 */; };
 		F1C51E5A2B444A9200FFEFB6 /* AWSS3Control in Frameworks */ = {isa = PBXBuildFile; productRef = F1C51E592B444A9200FFEFB6 /* AWSS3Control */; };
@@ -100,6 +105,11 @@
 		F14BF4022B0A975200CDB52C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F14BF4042B0ABD9300CDB52C /* CustomAlertLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertLogout.swift; sourceTree = "<group>"; };
 		F1725CE72B3772BB00E70827 /* SIWAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIWAView.swift; sourceTree = "<group>"; };
+		F1B47B082B4B602E00E88D77 /* HomeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVideo.swift; sourceTree = "<group>"; };
+		F1B47B0B2B4B60AB00E88D77 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		F1B47B0E2B4B622600E88D77 /* ContentViewVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewVideo.swift; sourceTree = "<group>"; };
+		F1B47B102B4C7A2200E88D77 /* DoubleTapSeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTapSeek.swift; sourceTree = "<group>"; };
+		F1B47B122B4CB84400E88D77 /* CMTime+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime+Extensions.swift"; sourceTree = "<group>"; };
 		F1BDFD7F2B3C987000F4B25C /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		F1C23E472B37A81900EC42DF /* HOLISTICA1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HOLISTICA1.entitlements; sourceTree = "<group>"; };
 		F1C83A922AEEC992000B5589 /* BiometryLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryLogin.swift; sourceTree = "<group>"; };
@@ -206,6 +216,7 @@
 		F128DE202AE0609200EA040C /* HOLISTICA1 */ = {
 			isa = PBXGroup;
 			children = (
+				F1B47B0A2B4B605B00E88D77 /* Helpers */,
 				F1C23E472B37A81900EC42DF /* HOLISTICA1.entitlements */,
 				F129991A2AF4142B009B35ED /* ViewModels */,
 				F12999192AF413FC009B35ED /* LoginViews */,
@@ -288,6 +299,7 @@
 		F129991B2AF43580009B35ED /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F1B47B0D2B4B61F100E88D77 /* CustomVideoPlayer */,
 				F129991E2AF43784009B35ED /* CourseCellHeader.swift */,
 				F1F1BE1D2B0996AC0089FA26 /* CourseCell.swift */,
 				F1D55BFC2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift */,
@@ -299,6 +311,25 @@
 				F12D1F322B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		F1B47B0A2B4B605B00E88D77 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F1B47B122B4CB84400E88D77 /* CMTime+Extensions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F1B47B0D2B4B61F100E88D77 /* CustomVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F1B47B082B4B602E00E88D77 /* HomeVideo.swift */,
+				F1B47B0B2B4B60AB00E88D77 /* CustomVideoPlayer.swift */,
+				F1B47B0E2B4B622600E88D77 /* ContentViewVideo.swift */,
+				F1B47B102B4C7A2200E88D77 /* DoubleTapSeek.swift */,
+			);
+			name = CustomVideoPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,6 +480,7 @@
 				F12999162AF40E17009B35ED /* CoursesVM.swift in Sources */,
 				F1290B472B2F857F00DD628B /* CoursesView.swift in Sources */,
 				F108CF232AE41F4C00D31D93 /* APIModel.swift in Sources */,
+				F1B47B0F2B4B622600E88D77 /* ContentViewVideo.swift in Sources */,
 				F1C83A952AEECA32000B5589 /* LoginVM.swift in Sources */,
 				F1F1BE162B093B2B0089FA26 /* ClassesVM.swift in Sources */,
 				F108CF2F2AE4227300D31D93 /* LoginView.swift in Sources */,
@@ -457,6 +489,7 @@
 				F1D55BFD2AFE4E0100B58405 /* WelcomeToHolisticaCell.swift in Sources */,
 				F12999182AF41025009B35ED /* TestData.swift in Sources */,
 				F1F1BE1E2B0996AC0089FA26 /* CourseCell.swift in Sources */,
+				F1B47B092B4B602E00E88D77 /* HomeVideo.swift in Sources */,
 				F1C83A932AEEC992000B5589 /* BiometryLogin.swift in Sources */,
 				F129991F2AF43784009B35ED /* CourseCellHeader.swift in Sources */,
 				F1D55C0E2B013A5B00B58405 /* ContentView.swift in Sources */,
@@ -470,10 +503,13 @@
 				F1CDE0F42AF53203006BD246 /* CreateProfileView.swift in Sources */,
 				F128DE4C2AE060CB00EA040C /* Interface.swift in Sources */,
 				F1725CE82B3772BB00E70827 /* SIWAView.swift in Sources */,
+				F1B47B0C2B4B60AB00E88D77 /* CustomVideoPlayer.swift in Sources */,
+				F1B47B132B4CB84400E88D77 /* CMTime+Extensions.swift in Sources */,
 				F1D55C082B00233000B58405 /* ProgramCell.swift in Sources */,
 				F14BF4052B0ABD9300CDB52C /* CustomAlertLogout.swift in Sources */,
 				F128DE222AE0609200EA040C /* HOLISTICA1App.swift in Sources */,
 				F1BDFD802B3C987000F4B25C /* ClassCell.swift in Sources */,
+				F1B47B112B4C7A2200E88D77 /* DoubleTapSeek.swift in Sources */,
 				F1D55C0A2B00243400B58405 /* ProgramsVM.swift in Sources */,
 				F12D1F332B1D30E1003E4DC1 /* MyProgramsEmptyCell.swift in Sources */,
 				F1D55C042AFEA8E600B58405 /* ProgramsView.swift in Sources */,

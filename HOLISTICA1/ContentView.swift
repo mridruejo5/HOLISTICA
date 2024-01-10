@@ -1,5 +1,5 @@
 //
-//  ContentView2.swift
+//  ContentViewVideo.swift
 //  HOLISTICA1
 //
 //  Created by Miguel Ridruejo on 12/11/23.

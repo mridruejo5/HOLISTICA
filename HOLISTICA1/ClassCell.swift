@@ -10,11 +10,10 @@ import AVKit
 
 struct ClassCell: View {
     let aClass: ProgramClasses
-    @State var isPlaying = false
-    let video: ClassesVideos
     
     var body: some View {
         VStack(alignment: .center) {
+            /*
             if let videoURL = URL(string: video.url) {
                 let player = AVPlayer(url: videoURL)
                 VideoPlayer(player: player)
@@ -42,10 +41,12 @@ struct ClassCell: View {
                     }
                     .shadow(radius: 10)
             }
-            VStack(alignment: .leading) {
+             */
+            VStack(alignment: .center) {
                 Text(aClass.name)
                     .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                /*
                 Text(aClass.class_status.rawValue)
                     .font(.footnote)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -53,13 +54,14 @@ struct ClassCell: View {
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                 */
             }
-            .padding(.top, 5)
+            .padding()
         }
     }
 }
 
 
 #Preview {
-    ClassCell(aClass: .class1, video: .video1)
+    ClassCell(aClass: .class1)
 }

@@ -60,12 +60,13 @@ struct ClassesView: View {
                 .foregroundStyle(Color.charcoal)
                 .padding(.top)
                 .padding(.horizontal)
+            
             List(classesVM.classes) { aclass in
-                if let video = aclass.video {
-                    ClassCell(aClass: aclass, video: video)
+                NavigationLink(destination: ContentViewVideo(aClass: aclass)) {
+                    ClassCell(aClass: aclass)
                 }
             }
-            .listStyle(.plain)
+            .listStyle(.inset)
         }
         .navigationBarTitleDisplayMode(.inline)
         

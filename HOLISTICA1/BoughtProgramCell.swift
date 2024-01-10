@@ -16,12 +16,11 @@ struct BoughtProgramCell: View {
             VStack {
                 Text(program.name)
                     .font(.headline)
+                    .padding(.vertical)
+                    .padding(.leading)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
-                Text("Status: \(program.programState.rawValue)")
-                    .font(.callout)
-                    .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding()
+            
             Spacer()
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 70, height: 50, alignment: .center)
@@ -57,7 +56,7 @@ struct BoughtProgramCell: View {
                             .shadow(radius: 4)
                     }
                 }
-                .padding(.trailing)
+                .padding()
 
         }
         .background {
