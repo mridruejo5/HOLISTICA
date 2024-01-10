@@ -376,7 +376,7 @@ struct HomeVideo: View {
                 .disabled(true)
                 .opacity(0.6)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             Button {
                 withAnimation(.easeInOut(duration: 0.2)) {
                     isRotated.toggle()
